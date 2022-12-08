@@ -1,0 +1,137 @@
+	/* @import url("https://fonts.googleapis.com/css?family=Concert+One|Pacifico"); */
+
+/* inner card */
+.card {
+  position: relative;
+  width: 300px;
+  height: 425px;
+  /* border: 7px solid #293462; */
+  border: 7px solid #fe5d55;
+  margin: 70px auto 50px auto;
+  border-radius: 1%;
+  box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  background-color: #ffeead;
+}
+
+.card .text-container {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+.card .text-container #head {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5em;
+  
+  margin: 0 auto 0 auto;
+}
+
+/* card fonts */
+.card p {
+  font-size: 1.1em;
+  line-height: 1.2;
+  font-family: "Pacifico", cursive;
+  /* color: #331717; */
+  /* color: #a64942 ; */
+  color: #000000;
+  
+  text-align: center;
+  margin: 0 auto 30px auto;
+  -webkit-user-select: none;
+  user-select: none;
+  line-height: 1.7em;
+}
+
+.card .bottom {
+  text-align: right;
+  line-height: 1.4em;
+  font-size: 0.94em;
+  border-radius: 5%;
+}
+
+.card .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: -10px 0px 0px -10px;
+  border: 10px solid  #fe5d55;
+  border-radius: 1%;
+  backface-visibility: hidden;
+  background-color: #fff1c1;
+  /* background-image: url($cover-image); */
+  background-size: contain;
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(800px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+}
+
+
+.card:hover .front {
+  transform: perspective(800px) rotateY(-170deg);
+  background-color: #fff1c1;
+  border-radius: 1%;
+}
+
+.card:hover .back {
+  transform: perspective(800px) rotateY(-170deg);
+  background-color: #fde4cf;
+  border-radius: 1%;
+}
+
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid #fe5d55;
+  margin: -10px 0px 0px -10px;
+  border-radius: 1%;
+  backface-visibility: visible;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(800px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+  background-color: powderblue;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.cover-shape-large {
+  position: absolute;
+  width: 65%;
+  height: 48%;
+  top: 25%;
+  left: 18%;
+  /* transform: rotateZ(45deg); */
+}
+
+.cover-shape-large .shape-block,
+.cover-shape-large .shape-diamond {
+  background-color: indianred;
+}
+
+.cover-shape-small {
+  position: absolute;
+  width: 50%;
+  height: 36%;
+  top: 30%;
+  left: 25%;
+}
+
+.shape-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: palevioletred;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.shape-diamond {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: ghostwhite;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  transform: rotateZ(45deg);
+}
